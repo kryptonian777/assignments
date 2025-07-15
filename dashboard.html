@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignments Dashboard</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .dashboard {
+      background: #fff;
+      padding: 2rem;
+      margin-top: 4rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 600px;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #333;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #f1f7ff;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    a.download-btn {
+      background-color: #4a90e2;
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    a.download-btn:hover {
+      background-color: #357ad3;
+    }
+
+    .downloaded {
+      color: #888;
+      font-style: italic;
+    }
+
+    .logout {
+      margin-top: 1rem;
+      color: #fff;
+      background-color: #f44336;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .logout:hover {
+      background-color: #d7372c;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <h2>Welcome, Student</h2>
+    <ul id="assignment-list"></ul>
+    <button class="logout" onclick="logout()">Logout</button>
+  </div>
+
+  <script>
+    function logout() {
+      localStorage.removeItem('user');
+      window.location.href = 'index.html';
+    }
+
+    const user = localStorage.getItem('user');
+    if (!user) {
+      alert('Please log in first.');
+      window.location.href = 'index.html';
+    }
+
+    fetch('assignments.json')
+      .then(res => res.json())
+      .then(assignments => {
+        const list = document.getElementById('assignment-list');
+
+        assignments.forEach(a => {
+          const li = document.createElement('li');
+          li.innerHTML = `<span>${a.title}</span>`;
+
+          const key = `downloaded_${user}_${a.id}`;
+
+          if (!localStorage.getItem(key)) {
+            const link = document.createElement('a');
+            link.href = a.url;
+            link.download = a.title;
+            link.textContent = 'Download';
+            link.className = 'download-btn';
+            link.onclick = (e) => {
+              const confirmDownload = confirm('You can download this assignment only once. Proceed?');
+              if (!confirmDownload) {
+                e.preventDefault();
+                return;
+              }
+              localStorage.setItem(key, 'true');
+              link.remove();
+              li.appendChild(document.createTextNode('Downloaded'));
+            };
+            li.appendChild(link);
+          } else {
+            const downloadedText = document.createElement('span');
+            downloadedText.className = 'downloaded';
+            downloadedText.textContent = '[Downloaded]';
+            li.appendChild(downloadedText);
+          }
+
+          list.appendChild(li);
+        });
+      })
+      .catch(err => {
+        console.error('Error loading assignments:', err);
+        alert('Failed to load assignments.');
+      });
+  </script>
+</body>
+</html>
