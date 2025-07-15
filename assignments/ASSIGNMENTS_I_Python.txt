@@ -1,0 +1,65 @@
+ASSIGNMENTS - I
+
+1. Simple Calculator:
+
+   - Take two numbers and an operator (+, -, *, /, //, %, **) as input
+
+   - Perform the selected operation using if-else structure (avoid elif)
+
+2. Compare Ages:
+
+   - Input two ages
+
+   - Use only comparison operators and basic print statements to show who is older, or if same
+
+3. Number Type Identifier:
+
+   - Input a number as string
+
+   - Convert it using type casting
+
+   - Use type() function to print original and converted types
+
+4. Discount Calculator:
+
+   - Input bill amount
+
+   - Apply a 10% discount using arithmetic and assignment operators
+
+   - Use only if (no elif)
+
+5. Login Validator:
+
+   - Define username and password variables
+
+   - Take user input and validate using logical and comparison operators
+
+6. Even/Odd Checker:
+
+   - Convert string input to integer
+
+   - Use modulus (%) operator to check even/odd
+
+7. Boolean Logic Evaluator:
+
+   - Create is_student, has_id_card, has_fee_paid (True/False)
+
+   - Print results using and/or/not (no if)
+
+8. Area Calculator:
+
+   - Take base and height input
+
+   - Use arithmetic and assignment operators to compute area of triangle
+
+9. Number Swapper:
+
+   - Input two numbers
+
+   - Swap values using only assignment operators (no third variable)
+
+10. Voting Eligibility:
+
+   - Input name and age
+
+   - Use print + comparison to show voting eligibility or years left (avoid elif)

@@ -1,0 +1,119 @@
+ASSIGNMENTS - III
+
+1. Full Name Formatter:
+
+   - Input first and last name.
+
+   - Print full name in uppercase and lowercase using string methods.
+
+2. Email Validator:
+
+   - Input an email.
+
+   - Check if it contains '@' and ends with '.com'.
+
+3. Sentence Word Counter:
+
+   - Input a sentence.
+
+   - Count how many times a specific word appears using count() or find().
+
+4. Remove Whitespace:
+
+   - Input a string with extra spaces.
+
+   - Use strip(), lstrip(), and rstrip() to clean it.
+
+5. String Length:
+
+   - Input a name and print its length using len().
+
+6. Username Generator:
+
+   - Input full name.
+
+   - Generate a username by combining initials and length of name (no slicing).
+
+7. Replace Word:
+
+   - Input a sentence and a word to replace.
+
+   - Replace all occurrences using replace().
+
+8. Masked Password Length:
+
+   - Input password as text.
+
+   - Print password length and replace all characters with '*'.
+
+9. F-String Introduction:
+
+   - Input name, age, and city.
+
+   - Use f-string to format a greeting sentence.
+
+10. File Extension Checker:
+
+   - Input a filename.
+
+   - Check if it ends with '.pdf', '.jpg', or '.txt'.
+
+11. Word Capitalizer:
+
+   - Input a sentence.
+
+   - Capitalize each word using title().
+
+12. Initials Extractor (Split Only):
+
+   - Input full name.
+
+   - Use split() and indexing to print initials (no slicing).
+
+13. Vowel Counter:
+
+   - Input a sentence.
+
+   - Count how many vowels are in the string.
+
+14. Format() String Formatter:
+
+   - Input product name, price, and quantity.
+
+   - Display the bill using format() method.
+
+15. % Operator Formatting:
+
+   - Input student's name and score.
+
+   - Use % operator to print: 'John scored 92% in math.'
+
+16. Palindrome Logic (Optional without slicing):
+
+   - Input a word.
+
+   - Use loop to reverse manually and compare.
+
+17. Character Frequency Counter:
+
+   - Input a string.
+
+   - Count the frequency of each character using a loop and dictionary.
+
+18. Domain Extractor:
+
+   - Input an email address.
+
+   - Extract domain using split('@')[1] (not slicing).
+
+19. String Splitter:
+
+   - Input a sentence.
+
+   - Split it into words using split() and print each word.
+
+20. Phone Number Validator:
+
+   - Input a number as string.
+
+   - Check if it has 10 digits and all characters are numeric.

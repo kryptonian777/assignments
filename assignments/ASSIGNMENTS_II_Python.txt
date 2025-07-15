@@ -1,0 +1,107 @@
+ASSIGNMENTS - II
+
+1. Temperature Checker:
+
+   - Input temperature in Celsius.
+
+   - If below 0: print 'Freezing', 0-20: 'Cold', 21-30: 'Warm', above 30: 'Hot'.
+
+2. Grade Calculator:
+
+   - Input marks (0-100).
+
+   - Use if-elif-else to print grades: A, B, C, D, F.
+
+3. ATM Withdrawal:
+
+   - Input account balance and amount to withdraw.
+
+   - Check if sufficient balance exists. Deduct and show new balance or print 'Insufficient Funds'.
+
+4. Voting Eligibility:
+
+   - Input age.
+
+   - Use if-else to check if person is eligible to vote (age >= 18).
+
+5. Movie Ticket Price:
+
+   - Input age.
+
+   - Ticket rules: Below 5: Free, 5-18: Rs.100, 19-60: Rs.150, 60+: Rs.80.
+
+6. Leap Year Checker:
+
+   - Input a year.
+
+   - Check if it's a leap year using if-elif-else.
+
+7. Largest of Three Numbers:
+
+   - Input 3 numbers and print which one is the largest using if-elif-else.
+
+8. Ternary - Even/Odd:
+
+   - Input number.
+
+   - Use ternary operator to check and print Even or Odd.
+
+9. Bill Discount:
+
+   - Input bill amount.
+
+   - Discount: Rs.1000+: 20%, Rs.500+: 10%, else no discount.
+
+10. Student Result:
+
+   - Input 3 subject marks.
+
+   - If all >=35, pass. If any <35, fail.
+
+11. Login Authentication:
+
+   - Predefined username/password. Take input and check if login is successful.
+
+12. BMI Calculator:
+
+   - Input height and weight.
+
+   - Calculate BMI and categorize: Underweight, Normal, Overweight, Obese.
+
+13. Number Sign Checker:
+
+   - Input number and print whether it's Positive, Negative, or Zero.
+
+14. Ternary - Login Status:
+
+   - Input boolean 'is_logged_in'. Print 'Welcome' or 'Please login' using ternary.
+
+15. Electricity Bill Calculator:
+
+   - Input units consumed. First 100: Rs.2/unit, next 100: Rs.3/unit, above 200: Rs.5/unit.
+
+16. Travel Mode Suggestion:
+
+   - Input distance in km.
+
+   - If <5 walk, <20 bike, <100 car, else train.
+
+17. Day Name by Number:
+
+   - Input 1-7 and print the corresponding day using if-elif-else.
+
+18. Triangle Type:
+
+   - Input 3 sides.
+
+   - Print whether triangle is Equilateral, Isosceles, or Scalene.
+
+19. Salary Tax Calculator:
+
+   - Input salary.
+
+   - Tax: >10L = 30%, >5L = 20%, >2.5L = 10%, else no tax.
+
+20. Ternary - Voting Status:
+
+   - Input age. Use ternary operator to print 'Eligible' or 'Not Eligible'.

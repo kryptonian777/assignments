@@ -1,0 +1,91 @@
+ASSIGNMENTS - IV
+
+1. Grocery List:
+
+   - Create a list of at least 5 grocery items.
+
+   - Print the full list and access the first and last item using indexing.
+
+2. Student Marks:
+
+   - Create a list of 5 student marks.
+
+   - Print the maximum and minimum marks using max() and min().
+
+3. Add Favorite Movies:
+
+   - Start with an empty list.
+
+   - Use append() to add 3 movie names one by one and display the list.
+
+4. Insert Missing Item:
+
+   - Create a to-do list with 4 tasks.
+
+   - Use insert() to add a task at position 2.
+
+5. Pop Last Item:
+
+   - Create a list of fruits.
+
+   - Use pop() to remove the last fruit and display which one was removed.
+
+6. Remove Specific Item:
+
+   - Create a list of book titles.
+
+   - Remove a specific book using remove().
+
+7. Reverse List:
+
+   - Create a list of numbers from 1 to 5.
+
+   - Use reverse() to reverse the list and display the result.
+
+8. Sort Student Names:
+
+   - Create a list of 5 student names in random order.
+
+   - Sort the list alphabetically using sort().
+
+9. Count Elements:
+
+   - Create a list of cities with some duplicates.
+
+   - Count how many times a specific city appears using count().
+
+10. Combine Two Lists:
+
+   - Create two lists: one for fruits, one for vegetables.
+
+   - Merge both into a single list using + operator.
+
+11. Replace Item in List:
+
+   - Create a list of 5 colors.
+
+   - Replace the 3rd color with a new one using indexing.
+
+12. Clear All Items:
+
+   - Create a list of numbers.
+
+   - Clear all items using clear() method.
+
+13. Copy a List:
+
+   - Create a list of 4 animals.
+
+   - Make a copy using copy() and show that both are separate lists.
+
+14. Slice a List:
+
+   - Create a list of 8 numbers.
+
+   - Print only the middle 4 elements using slicing.
+
+15. Check Item in List:
+
+   - Create a list of subjects.
+
+   - Ask the user to input a subject and check if it exists in the list.
