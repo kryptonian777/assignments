@@ -47,6 +47,12 @@
       align-items: center;
     }
 
+    li.offline {
+      background: #e0e0e0;
+      color: #888;
+      font-style: italic;
+    }
+
     a.download-btn {
       background-color: #4a90e2;
       color: white;
@@ -63,6 +69,14 @@
     .downloaded {
       color: #888;
       font-style: italic;
+    }
+
+    .not-available {
+      background-color: #aaa;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: not-allowed;
     }
 
     .logout {
@@ -108,30 +122,37 @@
           const li = document.createElement('li');
           li.innerHTML = `<span>${a.title}</span>`;
 
-          const key = `downloaded_${user}_${a.id}`;
-
-          if (!localStorage.getItem(key)) {
-            const link = document.createElement('a');
-            link.href = a.url;
-            link.download = a.title;
-            link.textContent = 'Download';
-            link.className = 'download-btn';
-            link.onclick = (e) => {
-              const confirmDownload = confirm('You can download this assignment only once. Proceed?');
-              if (!confirmDownload) {
-                e.preventDefault();
-                return;
-              }
-              localStorage.setItem(key, 'true');
-              link.remove();
-              li.appendChild(document.createTextNode('Downloaded'));
-            };
-            li.appendChild(link);
+          if (a.status === 'offline') {
+            li.classList.add('offline');
+            const span = document.createElement('span');
+            span.className = 'not-available';
+            span.textContent = 'Not Available';
+            li.appendChild(span);
           } else {
-            const downloadedText = document.createElement('span');
-            downloadedText.className = 'downloaded';
-            downloadedText.textContent = '[Downloaded]';
-            li.appendChild(downloadedText);
+            const key = `downloaded_${user}_${a.id}`;
+            if (!localStorage.getItem(key)) {
+              const link = document.createElement('a');
+              link.href = a.url;
+              link.download = a.title;
+              link.textContent = 'Download';
+              link.className = 'download-btn';
+              link.onclick = (e) => {
+                const confirmDownload = confirm('You can download this assignment only once. Proceed?');
+                if (!confirmDownload) {
+                  e.preventDefault();
+                  return;
+                }
+                localStorage.setItem(key, 'true');
+                link.remove();
+                li.appendChild(document.createTextNode('Downloaded'));
+              };
+              li.appendChild(link);
+            } else {
+              const downloadedText = document.createElement('span');
+              downloadedText.className = 'downloaded';
+              downloadedText.textContent = '[Downloaded]';
+              li.appendChild(downloadedText);
+            }
           }
 
           list.appendChild(li);
