@@ -1,26 +1,26 @@
 [
   {
     "id": "a1",
-    "title": "ASSIGNMENT I - Python",
-    "url": "assignments/assignments/ASSIGNMENTS_I_Python.pdf",
+    "title": "Assignment I - Python",
+    "url": "assignments/assignments/ASSIGNMENTS_I_Python.txt",
     "status": "online"
   },
   {
     "id": "a2",
-    "title": "ASSIGNMENT II - Python",
-    "url": "assignments/assignments/ASSIGNMENTS_II_python.pdf",
+    "title": "Assignment II - Python",
+    "url": "assignments/assignments/ASSIGNMENTS_II_python.txt",
     "status": "online"
   },
   {
     "id": "a3",
-    "title": "ASSIGNMENT III - Python",
-    "url": "assignments/assignments/ASSIGNMENTS_III_python.pdf",
+    "title": "Assignment III - Python",
+    "url": "assignments/assignments/ASSIGNMENTS_III_python.txt",
     "status": "offline"
   },
   {
     "id": "a4",
-    "title": "ASSIGNMENT IV - Python",
-    "url": "assignments/assignments/ASSIGNMENTS_IV_python.pdf",
+    "title": "Assignment IV - Python",
+    "url": "assignments/assignments/ASSIGNMENTS_IV_python.txt",
     "status": "offline"
   }
 ]
